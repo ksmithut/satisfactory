@@ -3,22 +3,31 @@
   "description": "",
   "version": "0.0.0",
   "private": true,
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
-    "format": "prettier-eslint 'src/**/*.js' --write",
-    "lint": "eslint 'src/**/*.js' && prettier-eslint 'src/**/*.js' --list-different",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "format": "prettier-eslint 'src/**/*.ts' --write",
+    "lint": "eslint 'src/**/*.ts' && prettier-eslint 'src/**/*.ts' --list-different",
     "start": "node .",
-    "start:dev": "nodemon"
+    "start:dev": "TS_NODE_FILES=true nodemon src/index.ts --require=ts-node/register"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/node": "^12.0.3",
+    "chalk": "^2.4.2",
+    "typescript": "^3.5.1"
+  },
   "devDependencies": {
-    "eslint": "^5.15.3",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "nodemon": "^1.18.10",
-    "prettier-eslint-cli": "^4.7.1"
+    "nodemon": "^1.19.1",
+    "prettier-eslint-cli": "^4.7.1",
+    "ts-node": "^8.2.0"
   }
 }

@@ -141,3 +141,4 @@ typings/
 
 config/local*.js
 config/local*.ts
+dist
