@@ -1,15 +1,3 @@
-// import {
-//   ItemID,
-//   Name,
-//   Item,
-//   MachineID,
-//   PowerConsumption,
-//   Machine,
-//   ItemQuantityTuple,
-//   Recipe,
-//   Alternate
-// } from './types'
-
 const createItem = (id: ItemID, name: Name): Item => ({ id, name })
 const createMachine = (
   id: MachineID,

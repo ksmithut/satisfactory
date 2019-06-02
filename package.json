@@ -14,7 +14,7 @@
     "start:dev": "TS_NODE_FILES=true nodemon src/index.ts --require=ts-node/register"
   },
   "dependencies": {
-    "@types/node": "^12.0.3",
+    "@types/node": "^12.0.4",
     "chalk": "^2.4.2",
     "typescript": "^3.5.1"
   },
