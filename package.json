@@ -14,18 +14,18 @@
     "start:dev": "TS_NODE_FILES=true nodemon src/index.ts --require=ts-node/register"
   },
   "dependencies": {
-    "@types/node": "^12.6.2",
+    "@types/node": "^12.7.2",
     "chalk": "^2.4.2",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^1.11.0",
-    "eslint": "^6.0.1",
-    "eslint-config-standard": "^13.0.0",
-    "eslint-plugin-import": "^2.18.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-standard": "^14.0.1",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.1",
     "nodemon": "^1.19.1",
     "prettier-eslint-cli": "^5.0.0",
     "ts-node": "^8.3.0"
