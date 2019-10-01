@@ -6,6 +6,7 @@ class ItemNotFound extends Error {
   details: {
     item: Item
   }
+
   constructor (item: Item) {
     super(`${item.id} not found`)
     Error.captureStackTrace(this, this.constructor)
@@ -22,6 +23,7 @@ class TooManyAlternateRecipes extends Error {
     item: Item
     recipes: Recipe[]
   }
+
   constructor (item: Item, recipes: Recipe[]) {
     super(`${item.id} has too many alternate recipes`)
     Error.captureStackTrace(this, this.constructor)
@@ -39,6 +41,7 @@ class TooManyRecipes extends Error {
     item: Item
     recipes: Recipe[]
   }
+
   constructor (item: Item, recipes: Recipe[]) {
     super(`${item.id} has too many recipes`)
     Error.captureStackTrace(this, this.constructor)
@@ -93,7 +96,7 @@ export function renderFactory (factory: Factory) {
     const quantity = String(factory.quantity)
     const itemsProduced = String(factory.itemsProduced)
     const itemsRemainder = factory.itemsProduced - factory.itemsRequested
-    let remainder = itemsRemainder ? `+${itemsRemainder}` : ''
+    const remainder = itemsRemainder ? `+${itemsRemainder}` : ''
     return chalk`{yellow ${quantity}} {cyan ${machineName}} {gray (${itemName})} {green ${itemsProduced}} {magenta ${remainder}}`
   }
   const getChildren = (factory: Factory) => factory.subFactories

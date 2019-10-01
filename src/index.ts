@@ -8,10 +8,10 @@ const renderHeader = (string: string) => {
 }
 
 const createFactoryPrinter = (recipes: Recipe[]) => {
-  return (item: Item) => {
+  return (item: Item, quantity?: number) => {
     console.log(renderHeader(`${item.name} Factory`))
     console.log()
-    console.log(renderFactory(planFactory(item, recipes)))
+    console.log(renderFactory(planFactory(item, recipes, quantity)))
     console.log()
   }
 }
@@ -19,5 +19,7 @@ const createFactoryPrinter = (recipes: Recipe[]) => {
 const recipes = baseRecipes.concat([alternateRecipes.screw])
 const printFactory = createFactoryPrinter(recipes)
 
-printFactory(items.motor)
-printFactory(items.quickwire)
+// printFactory(items.motor)
+// printFactory(items.quickwire)
+
+printFactory(items.reinforcedIronPlate, 15)
